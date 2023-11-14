@@ -3,17 +3,15 @@
 ## Team Members:
 
 ### Team Member 1 (202311067)
-- **Contributions:** Responsible for data collection and initial preprocessing. Gathered comprehensive data on past cricket matches, team performance, player statistics, match conditions, and venue details.Conducted exploratory data analysis (EDA) to identify patterns and insights in the cricket dataset. Utilized data visualizations to highlight key trends and prepare the data for machine learning.
-
-### Team Member 2 (202311048)
+- **Contributions:** Responsible for data collection and initial preprocessing. Gathered comprehensive data on past cricket matches, team performance, player statistics, match conditions, and venue details.
+### Team Member 2 (202311066)
+- **Contributions:** Conducted exploratory data analysis (EDA) to identify patterns and insights in the cricket dataset. Utilized data visualizations to highlight key trends and prepare the data for machine learning.Worked on model tuning, result reporting, and the analysis of model performance. 
+- 
+### Team Member 3 (202311048)
 - **Contributions:** Specialized in designing, developing, and deploying the ML RESTful API. 
 
-### Team Member 3(202311033) & 4(202311040)
+### Team Member 4(202311033) & 5(202311040)
 - **Contributions:** Involved in feature engineering, data transformation, and model evaluation. Collaborated with Team Member 2 to ensure seamless integration of ML models into the API.Led the implementation of Artificial Neural Networks (ANNs/DNNs) for prediction tasks related to the ICC Cricket World Cup 2023.
-
-### Team Member 5 (202311066)
-- **Contributions:** Worked on model tuning, result reporting, and the analysis of model performance. Collaborated with Team Member 3 for effective deployment of machine learning models in the API.
-
 
 ## Summary of the Cricket Dataset:
 
