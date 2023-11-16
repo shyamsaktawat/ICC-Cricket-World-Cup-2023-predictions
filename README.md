@@ -13,6 +13,36 @@
 ### Team Member 4(202311033) & 5(202311040)
 - **Contributions:** Involved in feature engineering, data transformation, and model evaluation. Collaborated with Team Member 2 to ensure seamless integration of ML models into the API.Led the implementation of Artificial Neural Networks (ANNs/DNNs) for prediction tasks related to the ICC Cricket World Cup 2023.
 
+- # Cricket Match Prediction API
+
+Predict the winner of cricket matches using this simple API.
+
+## Introduction
+
+This API provides a straightforward way to predict the winner of cricket matches based on given match details such as teams, venue, toss winner, and toss decision.
+
+## Getting Started
+
+## API Documentation
+You can use the API to predict the winner of a match by sending a POST request to the following endpoint:
+
+/predict_winner
+## Request Format
+Send a JSON payload with the following attributes:
+
+{ "team1": "India", "team2": "Pakistan", "venue": "Eden Gardens", "toss_winner": "India", "toss_decision": "bat" }
+## Example using cURL
+curl -X POST -H "Content-Type: application/json" -d '{"team1": "India", "team2": "Pakistan", "venue": "Eden Gardens", "toss_winner": "India", "toss_decision": "bat"}' http://yourdomain.com/predict_winner
+The API will respond with the predicted winner and additional match details.
+
+## Usage
+
+### API Endpoint
+
+The API endpoint for predicting match winners is:
+
+
+
 ## Summary of the Cricket Dataset:
 
 ### Overview
