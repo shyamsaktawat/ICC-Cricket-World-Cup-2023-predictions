@@ -32,8 +32,12 @@ Send a JSON payload with the following attributes:
 
 { "team1": "India", "team2": "Pakistan", "venue": "Eden Gardens", "toss_winner": "India", "toss_decision": "bat" }
 ## Example using cURL
-curl -X POST -H "Content-Type: application/json" -d '{"team1": "India", "team2": "Pakistan", "venue": "Eden Gardens", "toss_winner": "India", "toss_decision": "bat"}' http://yourdomain.com/predict_winner
+curl -X POST -H "Content-Type: application/json" -d '{"team1": "India", "team2": "Pakistan", "venue": "Eden Gardens", "toss_winner": "India", "toss_decision": "bat"}' http://http://shyamsaktawat.pythonanywhere.com/predict_winner
 The API will respond with the predicted winner and additional match details.
+
+## Use Now
+
+ " http://matchwinner.pythonanywhere.com/ "
 
 ## Usage
 
