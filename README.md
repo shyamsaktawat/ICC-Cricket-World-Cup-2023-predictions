@@ -52,23 +52,15 @@ Output Format: JSON response with predictions for each team's highest wicket-tak
 Example Usage
 Here is an example Python script demonstrating how to make a POST request to the API:
 
-python
-Copy code
-import requests
 
-# URL for the Flask API
-api_url = 'http://localhost:5000/predict_most_wickets'
+   # URL for the Flask API
+   
 
-# Example input data with two team names
-input_data = {'team1': 'IND', 'team2': 'NZ'}
-
-# Make a POST request to the API
-response = requests.post(api_url, json=input_data)
-
-# Check if the request was successful (status code 200)
-if response.status_code == 200:
+    api_url = 'http://localhost:5000/predict_most_wickets'
+    input_data = {'team1': 'IND', 'team2': 'NZ'}
+    response = requests.post(api_url, json=input_data)
+    if response.status_code == 200:
     predictions = response.json()['predictions']
-    
     # Print the results
     print(f"Predicted Highest Wicket-Taker for {input_data['team1']}:")
     print(f"Player: {predictions['team1']['Player']}")
@@ -77,9 +69,12 @@ if response.status_code == 200:
     print(f"\nPredicted Highest Wicket-Taker for {input_data['team2']}:")
     print(f"Player: {predictions['team2']['Player']}")
     print(f"Predicted Wickets: {predictions['team2']['Predicted_Wickets']}")
-else:
+    else:
     print(f"Error: {response.json()['error']}")
-Make sure to replace the api_url variable with the correct URL where your Flask API is hosted.
+
+
+## use curl
+    curl -X POST -H "Content-Type: application/json" -d '{"team1": "IND", "team2": "NZ"}' http://localhost:5000/predict_highest_wicket_taker
 
 Getting Started
 To set up and run the API:
