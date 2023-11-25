@@ -13,7 +13,7 @@
 ### Team Member 4(202311033) & 5(202311040)
 - **Contributions:** Involved in feature engineering, data transformation, and model evaluation. Collaborated with Team Member 2 to ensure seamless integration of ML models into the API.Led the implementation of Artificial Neural Networks (ANNs/DNNs) for prediction tasks related to the ICC Cricket World Cup 2023.
 
-- # Cricket Match Prediction API
+- # Cricket Wickets Prediction API
 
 Predict the winner of cricket matches using this simple API.
 
@@ -39,12 +39,55 @@ The API will respond with the predicted winner and additional match details.
 
  " http://matchwinner.pythonanywhere.com/ "
 
-## Usage
 
-### API Endpoint
+Overview
+This repository contains a Flask API for predicting the highest wicket-taker in a cricket match. The API utilizes machine learning models to provide insights into which player is likely to take the most wickets based on match details.
 
-The API endpoint for predicting match winners is:
+API Endpoints
+Predict Highest Wicket-Taker
+Endpoint: /predict_most_wickets
+Method: POST
+Input Format: JSON payload with match details (team1, team2, venue, toss_winner, toss_decision)
+Output Format: JSON response with predictions for each team's highest wicket-taker
+Example Usage
+Here is an example Python script demonstrating how to make a POST request to the API:
 
+python
+Copy code
+import requests
+
+# URL for the Flask API
+api_url = 'http://localhost:5000/predict_most_wickets'
+
+# Example input data with two team names
+input_data = {'team1': 'IND', 'team2': 'NZ'}
+
+# Make a POST request to the API
+response = requests.post(api_url, json=input_data)
+
+# Check if the request was successful (status code 200)
+if response.status_code == 200:
+    predictions = response.json()['predictions']
+    
+    # Print the results
+    print(f"Predicted Highest Wicket-Taker for {input_data['team1']}:")
+    print(f"Player: {predictions['team1']['Player']}")
+    print(f"Predicted Wickets: {predictions['team1']['Predicted_Wickets']}")
+
+    print(f"\nPredicted Highest Wicket-Taker for {input_data['team2']}:")
+    print(f"Player: {predictions['team2']['Player']}")
+    print(f"Predicted Wickets: {predictions['team2']['Predicted_Wickets']}")
+else:
+    print(f"Error: {response.json()['error']}")
+Make sure to replace the api_url variable with the correct URL where your Flask API is hosted.
+
+Getting Started
+To set up and run the API:
+
+Clone this repository to your local machine.
+Install the required dependencies using pip install -r requirements.txt.
+Run the Flask API using python app.py.
+Make POST requests to the specified endpoint with the required input data.
 
 
 ## Summary of the Cricket Dataset:
